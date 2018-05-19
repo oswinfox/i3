@@ -34,11 +34,14 @@ bindsym $mod+Return exec xfce4-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
+# Rofi " {{{
 bindsym $mod+d exec rofi -show run
 bindsym $mod+Ctrl+s exec --no-startup-id rofi -show ssh
 bindsym $mod1+p exec ~/bin/rofi-pass
+bindsym $mod+x exec ~/bin/rofi-power 
+# " }}}
 
+# Focus " {{{
 # change focus
 bindsym $mod1+h focus left
 bindsym $mod1+k focus down
@@ -61,11 +64,11 @@ bindsym $mod+Shift+semicolon move right
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+Right move right 
+# " }}}
 
 # split in horizontal orientation
 bindsym $mod+h split h
-
 # split in vertical orientation
 bindsym $mod+v split v
 
@@ -89,7 +92,8 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-# switch to workspace
+# Workspace " {{{
+#switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
@@ -111,7 +115,8 @@ bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+0 move container to workspace 10 
+# " }}}
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -120,6 +125,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+# Resize windows " {{{
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -144,7 +150,8 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "resize" 
+# " }}}
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -152,18 +159,19 @@ bar {
         status_command i3status
 }
 
+# App and stuff " {{{
 #add xfce4 services and other stuff
 exec --no-startup-id xfsettingsd --sm-client-disable &
 exec --no-startup-id nm-applet &
 exec --no-startup-id compton &
-exec --no-startup-id nm-applet &
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id xfce4-power-manager
 
 #printscreen
 bindsym Print exec --no-startup-id scrot
 bindsym $mod+Print --release exec --no-startup-id scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id scrot -s
+bind sym $mod+Shift+Print --release exec --no-startup-id scrot -s 
+# " }}}
 
 #sound
 #exec --no-startup-id volumeicon
@@ -182,27 +190,7 @@ assign [class="mpv"] 3
 assign [class="Steam"] 4
 assign [class="Thunderbird"] 3
 
-# Set shut down, restart and locking features
-bindsym $mod+x mode "$mode_system"
-set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
-mode "$mode_system" {
-    bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym s exec --no-startup-id i3exit suspend, mode "default"
-    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
-    bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-    bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
-
-    # exit system mode: "Enter" or "Escape"
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
-#############################
-### settings for i3-gaps: ###
-#############################
-
+# I3 gaps config " {{{
 ## Set inner/outer gaps
 gaps inner 10
 gaps outer -4
@@ -253,8 +241,8 @@ mode "$mode_gaps_outer" {
         bindsym Shift+0     gaps outer all set 0
 
         bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
+        bindsym Escape mode "default" } 
+         # " }}}
 
 #printscreen
 bindsym $mod+Print exec xfce4-screenshooter
