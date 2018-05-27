@@ -1,0 +1,31 @@
+conky.config = {
+	alignment = 'bottom_left',
+	background = true,
+	color2 = '875D7C',
+	cpu_avg_samples = 2,
+	default_color = 'F9FAF9',
+	double_buffer = true,
+	font = 'Bitstream Hack Bold:size=10',
+	draw_shades = false,
+	gap_x = 25,
+	gap_y = 45,
+	minimum_width = 200,
+	no_buffers = true,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = true,
+	update_interval = 2.0,
+	use_xft = true,
+}
+conky.text = [[
+${color2}open new terminal - ${color}super+Enter
+${color2}kill focused - ${color}super+Shift+q
+${color2}toggle split direction - ${color}super+q
+${color2}rofi - ${color}super+d
+${color2}switch to workspace 1-10 - ${color}super+1-0
+${color2}send to workspace 1-10 - ${color}super+Ctrl+1-0
+${color2}navigate workspaces - ${color}super+Ctrl+arrowkeys
+${color2}toggle floating - ${color}super+Shift+Space
+${color2}exit - ${color}super+shift+e
+
+]]

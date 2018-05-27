@@ -2,7 +2,7 @@
 
 **To install this config please run:**
 
--  $ git clone https://github.com/oswinfox/i3.git && mv i3 ~/.config/
+-  $ git clone https://github.com/oswinfox/i3.git
 
 This config works with two config files, one for i3 and one for i3status: 
 
