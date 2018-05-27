@@ -13,17 +13,15 @@ The DIR py3status is a folder where you can add some python modules for i3status
 
 **You will need all this packages to use this config:**
 
--  i3 
--  i3-gaps 
--  i3status 
+-  i3 i3-gaps i3status 
 -  rofi 
 -  nm-applet 
 -  compton  # I use a default config easy to find on compton page.
 -  nitrogen 
 -  scrot 
--  pulseaudio 
--  pasystray 
--  pavucontrol 
+-  pulseaudio pavucontrol
+-  pasystray # Can be replaced by pa-applet
 -  fontawesome
+-  py3status
 
 **I will update here if any application is needed with the config.**
