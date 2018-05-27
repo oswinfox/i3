@@ -23,5 +23,6 @@ The DIR py3status is a folder where you can add some python modules for i3status
 -  pasystray # Can be replaced by pa-applet
 -  fontawesome
 -  py3status
+-  conky
 
 **I will update here if any application is needed with the config.**
