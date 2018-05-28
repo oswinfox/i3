@@ -24,5 +24,6 @@ The DIR py3status is a folder where you can add some python modules for i3status
 -  fontawesome
 -  py3status
 -  conky
+-  font Hack # Can be downloaded from https://sourcefoundry.org/hack/
 
 **I will update here if any application is needed with the config.**
