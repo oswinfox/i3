@@ -190,6 +190,7 @@ for_window [class="Pavucontrol"] floating enable border pixel 1
 assign [class="mpv"] $ws3
 assign [class="Pidgin"] $ws3
 assign [class="Thunderbird"] $ws3
+assign [class="Pcmanfm"] $ws4
 assign [class="Steam"] $ws5
 
 # I3 gaps config " {{{
