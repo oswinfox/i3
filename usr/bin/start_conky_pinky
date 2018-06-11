@@ -1,6 +1,0 @@
-#!/bin/bash
-
-conky -c /usr/share/conky/conky_shortcuts_pinky &&
-conky -c /usr/share/conky/conky_pinky &&
-
-exit 0
