@@ -18,6 +18,7 @@ conky.config = {
 	use_xft = true,
 }
 conky.text = [[
+${color}I3 shortcuts
 ${color2}open new terminal - ${color}super+Enter
 ${color2}kill focused - ${color}super+Shift+q
 ${color2}toggle split direction - ${color}super+q
@@ -27,5 +28,16 @@ ${color2}send to workspace 1-5 - ${color}super+Ctrl+1-5
 ${color2}navigate workspaces - ${color}super+Ctrl+arrowkeys
 ${color2}toggle floating - ${color}super+Shift+Space
 ${color2}exit - ${color}super+shift+e
-
+${color}TMUX shortcuts
+${color2}Reload TMUX conf - ${color}Alt+r
+${color2}Open a new window - ${color}Ctrl+e+c
+${color2}Switch next window - ${color} Ctrl+f
+${color2}Switch previous window - ${color} Ctrl+s
+${color2}Split horizontaly - ${color}Ctrl+e+e
+${color2}Split vertically - ${color}Ctrl+e+r
+${color2}Split under-mid - ${color}Ctrl+e+a
+${color2}Fullscreen mode - ${color}F12
+${color2}Reszie mode - ${color}Ctrl+e+(kjhl)
+${color2}Enter VIM like mode - ${color}Ctrl+b
+${color2}Quit VIM like mode - ${color}Ctrl+c
 ]]
